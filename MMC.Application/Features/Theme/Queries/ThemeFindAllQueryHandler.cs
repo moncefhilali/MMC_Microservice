@@ -1,5 +1,4 @@
 ﻿using MediatR;
-using MMC.Application.Features.City.Queries;
 using MMC.Application.Interfaces;
 using MMC.Domain.DTOs;
 

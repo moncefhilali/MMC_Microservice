@@ -18,6 +18,11 @@ public class AutoMapperProfile : Profile
         CreateMap<EventPostDTO, Event>();
         CreateMap<EventPutDTO, Event>();
 
+        //Mode Mapping
+        CreateMap<Mode, ModeGetDTO>();
+        CreateMap<ModePostDTO, Mode>();
+        CreateMap<ModePutDTO, Mode>();
+
         //Theme Mapping
         CreateMap<Theme, ThemeGetDTO>();
         CreateMap<ThemePostDTO, Theme>();

@@ -23,6 +23,11 @@ public class AutoMapperProfile : Profile
         CreateMap<ModePostDTO, Mode>();
         CreateMap<ModePutDTO, Mode>();
 
+        //Partner Mapping
+        CreateMap<Partner, PartnerGetDTO>();
+        CreateMap<PartnerPostDTO, Partner>();
+        CreateMap<PartnerPutDTO, Partner>();
+
         //Theme Mapping
         CreateMap<Theme, ThemeGetDTO>();
         CreateMap<ThemePostDTO, Theme>();

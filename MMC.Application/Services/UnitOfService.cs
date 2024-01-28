@@ -11,6 +11,7 @@ public class UnitOfService : IUnitOfService
     public ICityService CityService { get; private set; }
     public IEventService EventService { get; private set; }
     public IModeService ModeService { get; private set; }
+    public IPartnerService PartnerService { get; private set; }
     public IThemeService ThemeService { get; private set; }
 
 
@@ -21,6 +22,7 @@ public class UnitOfService : IUnitOfService
         CityService = new CityService(_uow, _map);
         EventService = new EventService(_uow, _map);
         ModeService = new ModeService(_uow, _map);
+        PartnerService = new PartnerService(_uow, _map);
         ThemeService = new ThemeService(_uow, _map);
     }
 }

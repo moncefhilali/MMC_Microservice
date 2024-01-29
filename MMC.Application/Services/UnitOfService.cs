@@ -15,6 +15,7 @@ public class UnitOfService : IUnitOfService
     public ISessionService SessionService { get; private set; }
     public ISponsorService SponsorService { get; private set; }
     public IThemeService ThemeService { get; private set; }
+    public IUserService UserService { get; private set; }
 
 
     public UnitOfService(IUnitOfWork uow, IMapper map)
@@ -28,5 +29,6 @@ public class UnitOfService : IUnitOfService
         SessionService = new SessionService(_uow, _map);
         SponsorService = new SponsorService(_uow, _map);
         ThemeService = new ThemeService(_uow, _map);
+        UserService = new UserService(_uow, _map);
     }
 }

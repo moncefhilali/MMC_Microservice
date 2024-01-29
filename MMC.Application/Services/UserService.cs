@@ -35,23 +35,6 @@ public class UserService : IUserService
 
         return _map.Map<IEnumerable<UserGetDTO>>(users);
     }
-    public async Task<UserGetDTO> CreateAsync(UserPostDTO userPostDTO)
-    {
-        var user = _map.Map<User>(userPostDTO);
-        if (!await _uow.UserRepository.PostAsync(user))
-            return null;
-
-        await _uow.CompleteAsync();
-        return _map.Map<UserGetDTO>(user);
-    }
-    public async Task<UserGetDTO> UpdateAsync(UserPutDTO userPutDTO)
-    {
-        var user = _map.Map<User>(userPutDTO);
-        var updatedUser = await _uow.UserRepository.PutAsync(user.Id, user);
-
-        await _uow.CompleteAsync();
-        return _map.Map<UserGetDTO>(updatedUser);
-    }
     public async Task<bool> DeleteAsync(Guid id)
     {
         var success = await _uow.UserRepository.RemoveAsync(id);

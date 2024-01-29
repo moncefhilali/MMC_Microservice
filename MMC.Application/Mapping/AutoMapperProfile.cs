@@ -45,7 +45,5 @@ public class AutoMapperProfile : Profile
 
         //Theme Mapping
         CreateMap<User, UserGetDTO>();
-        CreateMap<UserPostDTO, User>();
-        CreateMap<UserPutDTO, User>();
     }
 }

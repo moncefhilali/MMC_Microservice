@@ -28,7 +28,7 @@ public class AutoMapperProfile : Profile
         CreateMap<PartnerPostDTO, Partner>();
         CreateMap<PartnerPutDTO, Partner>();
 
-        //Sponsor Mapping
+        //Session Mapping
         CreateMap<Session, SessionGetDTO>();
         CreateMap<SessionPostDTO, Session>();
         CreateMap<SessionPutDTO, Session>();
@@ -42,5 +42,10 @@ public class AutoMapperProfile : Profile
         CreateMap<Theme, ThemeGetDTO>();
         CreateMap<ThemePostDTO, Theme>();
         CreateMap<ThemePutDTO, Theme>();
+
+        //Theme Mapping
+        CreateMap<User, UserGetDTO>();
+        CreateMap<UserPostDTO, User>();
+        CreateMap<UserPutDTO, User>();
     }
 }

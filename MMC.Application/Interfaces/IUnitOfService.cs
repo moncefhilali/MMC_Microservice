@@ -9,4 +9,5 @@ public interface IUnitOfService
     ISessionService SessionService { get; }
     ISponsorService SponsorService { get; }
     IThemeService ThemeService { get; }
+    IUserService UserService { get; }
 }

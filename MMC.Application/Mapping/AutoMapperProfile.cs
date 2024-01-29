@@ -28,6 +28,11 @@ public class AutoMapperProfile : Profile
         CreateMap<PartnerPostDTO, Partner>();
         CreateMap<PartnerPutDTO, Partner>();
 
+        //Sponsor Mapping
+        CreateMap<Sponsor, SponsorGetDTO>();
+        CreateMap<SponsorPostDTO, Sponsor>();
+        CreateMap<SponsorPutDTO, Sponsor>();
+
         //Theme Mapping
         CreateMap<Theme, ThemeGetDTO>();
         CreateMap<ThemePostDTO, Theme>();

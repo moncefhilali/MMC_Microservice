@@ -23,6 +23,7 @@ public class PartnerService : IPartnerService
 
 
 
+
     public async Task<PartnerGetDTO> FindAsync(Guid id)
     {
         var partner = await _uow.PartnerRepository.GetAsync(id);

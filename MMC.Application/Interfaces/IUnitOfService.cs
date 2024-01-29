@@ -6,5 +6,6 @@ public interface IUnitOfService
     IEventService EventService { get; }
     IModeService ModeService { get; }
     IPartnerService PartnerService { get; }
+    ISponsorService SponsorService { get; }
     IThemeService ThemeService { get; }
 }

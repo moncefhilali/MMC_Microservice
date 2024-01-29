@@ -12,6 +12,7 @@ public class UnitOfService : IUnitOfService
     public IEventService EventService { get; private set; }
     public IModeService ModeService { get; private set; }
     public IPartnerService PartnerService { get; private set; }
+    public ISessionService SessionService { get; private set; }
     public ISponsorService SponsorService { get; private set; }
     public IThemeService ThemeService { get; private set; }
 
@@ -24,6 +25,7 @@ public class UnitOfService : IUnitOfService
         EventService = new EventService(_uow, _map);
         ModeService = new ModeService(_uow, _map);
         PartnerService = new PartnerService(_uow, _map);
+        SessionService = new SessionService(_uow, _map);
         SponsorService = new SponsorService(_uow, _map);
         ThemeService = new ThemeService(_uow, _map);
     }

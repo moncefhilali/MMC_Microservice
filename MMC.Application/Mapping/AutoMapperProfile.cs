@@ -29,6 +29,11 @@ public class AutoMapperProfile : Profile
         CreateMap<PartnerPutDTO, Partner>();
 
         //Sponsor Mapping
+        CreateMap<Session, SessionGetDTO>();
+        CreateMap<SessionPostDTO, Session>();
+        CreateMap<SessionPutDTO, Session>();
+
+        //Sponsor Mapping
         CreateMap<Sponsor, SponsorGetDTO>();
         CreateMap<SponsorPostDTO, Sponsor>();
         CreateMap<SponsorPutDTO, Sponsor>();

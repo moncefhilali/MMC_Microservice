@@ -7,6 +7,7 @@ public interface IUnitOfService
     IModeService ModeService { get; }
     IPartnerService PartnerService { get; }
     ISessionService SessionService { get; }
+    ISpeakerService SpeakerService { get; }
     ISponsorService SponsorService { get; }
     IThemeService ThemeService { get; }
     IUserService UserService { get; }

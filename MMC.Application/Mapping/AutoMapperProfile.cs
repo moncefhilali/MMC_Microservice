@@ -33,6 +33,11 @@ public class AutoMapperProfile : Profile
         CreateMap<SessionPostDTO, Session>();
         CreateMap<SessionPutDTO, Session>();
 
+        //Speaker Mapping
+        CreateMap<Speaker, SpeakerGetDTO>();
+        CreateMap<SpeakerPostDTO, Speaker>();
+        CreateMap<SpeakerPutDTO, Speaker>();
+
         //Sponsor Mapping
         CreateMap<Sponsor, SponsorGetDTO>();
         CreateMap<SponsorPostDTO, Sponsor>();

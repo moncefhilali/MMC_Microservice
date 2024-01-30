@@ -1,7 +1,6 @@
 ﻿using MediatR;
 using MMC.Application.Interfaces;
 using MMC.Domain.DTOs;
-using MMC.Domain.Entities;
 
 namespace MMC.Application.Features.Event.Commands;
 

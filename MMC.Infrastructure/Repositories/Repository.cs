@@ -7,20 +7,20 @@ namespace MMC.Infrastructure.Repositories;
 
 public class Repository<T> : IRepository<T> where T : class
 {
-    private readonly IBaseDbContext _db;
-    private readonly DbSet<T> _set;
+    private readonly IBaseDbContext _context;
+    private readonly DbSet<T> _db;
 
     public Repository(IBaseDbContext db)
     {
-        _db = db;
-        _set = _db.Set<T>();
+        _context = db;
+        _db = _context.Set<T>();
     }
 
 
 
     public async Task<T?> GetAsync<TKey>(TKey id, params Expression<Func<T, object>>[] includes)
     {
-        IQueryable<T> query = _set;
+        IQueryable<T> query = _db;
 
         foreach (var item in includes)
             query = query.Include(item);
@@ -29,7 +29,7 @@ public class Repository<T> : IRepository<T> where T : class
     }
     public async Task<IEnumerable<T>> GetAllAsync(params Expression<Func<T, object>>[] includes)
     {
-        IQueryable<T> query = _set;
+        IQueryable<T> query = _db;
 
         foreach (var item in includes)
             query = query.Include(item);
@@ -38,7 +38,7 @@ public class Repository<T> : IRepository<T> where T : class
     }
     public async Task<bool> PostAsync(T entity)
     {
-        await _set.AddAsync(entity);
+        await _db.AddAsync(entity);
         return true;
     }
     public async Task<T?> PutAsync<TKey>(TKey id, T entity)
@@ -46,7 +46,7 @@ public class Repository<T> : IRepository<T> where T : class
         var data = await GetAsync(id);
         if (data is null) return default;
 
-        _set.Entry(data).CurrentValues.SetValues(entity);
+        _db.Entry(data).CurrentValues.SetValues(entity);
         return data;
     }
     public async Task<bool> RemoveAsync<TKey>(TKey id)
@@ -54,7 +54,7 @@ public class Repository<T> : IRepository<T> where T : class
         var data = await GetAsync(id);
         if (data is not null)
         {
-            _set.Remove(data);
+            _db.Remove(data);
             return true;
         }
         return false;

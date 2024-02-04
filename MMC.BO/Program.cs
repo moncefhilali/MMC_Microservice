@@ -8,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
+builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("YourWebApiBaseUrl") });
 
 var app = builder.Build();
 

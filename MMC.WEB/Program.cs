@@ -1,6 +1,17 @@
+using MMC.WEB.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+
+builder.Services.AddHttpClient<CityService>(client =>
+{
+    client.BaseAddress = new Uri(builder.Configuration.GetValue<string>("ApiSettings:BaseUrl"));
+});
+builder.Services.AddScoped<CityService>();
+
+
+
+
 builder.Services.AddRazorPages();
 
 var app = builder.Build();

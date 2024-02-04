@@ -9,6 +9,18 @@ builder.Services.AddHttpClient<CityService>(client =>
 });
 builder.Services.AddScoped<CityService>();
 
+builder.Services.AddHttpClient<ThemeService>(client =>
+{
+    client.BaseAddress = new Uri(builder.Configuration.GetValue<string>("ApiSettings:BaseUrl"));
+});
+builder.Services.AddScoped<ThemeService>();
+
+builder.Services.AddHttpClient<EventService>(client =>
+{
+    client.BaseAddress = new Uri(builder.Configuration.GetValue<string>("ApiSettings:BaseUrl"));
+});
+builder.Services.AddScoped<EventService>();
+
 
 
 

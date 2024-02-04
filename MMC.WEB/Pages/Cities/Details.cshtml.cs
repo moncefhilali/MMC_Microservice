@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using MMC.Domain.Entities;
+using MMC.WEB.Entities;
 using MMC.WEB.Services;
 
 namespace MMC.WEB.Pages.Cities;
@@ -32,13 +32,13 @@ public class DetailsModel : PageModel
         }
 
         await _service.Update(City.Id, City);
-        return RedirectToPage("/Settings/City/Index");
+        return RedirectToPage("/Cities/Index");
     }
 
 
     public async Task<IActionResult> OnPostDelete()
     {
         await _service.Delete(City.Id);
-        return RedirectToPage("/Settings/City/Index");
+        return RedirectToPage("/Cities/Index");
     }
 }

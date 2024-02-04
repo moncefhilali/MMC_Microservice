@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using MMC.Domain.Entities;
+using MMC.WEB.Entities;
 using MMC.WEB.Services;
 
 namespace MMC.WEB.Pages.Cities;
@@ -26,7 +26,7 @@ public class IndexModel : PageModel
 
     public async Task<IActionResult> OnPostCreate()
     {
-        if (string.IsNullOrEmpty(City.Name) || !ModelState.IsValid)
+        if (string.IsNullOrEmpty(City.Name))
         {
             ModelState.AddModelError("City.Name", "The field \"Name\" is required!");
             await OnGet();
@@ -34,6 +34,6 @@ public class IndexModel : PageModel
         }
 
         await _service.Create(City);
-        return RedirectToPage("/Settings/City/Index");
+        return RedirectToPage("/Cities/Index");
     }
 }

@@ -1,4 +1,4 @@
-﻿using MMC.Domain.Entities;
+﻿using MMC.WEB.Entities;
 
 namespace MMC.WEB.Services;
 

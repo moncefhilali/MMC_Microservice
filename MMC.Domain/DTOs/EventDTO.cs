@@ -9,7 +9,9 @@ public record EventGetDTO
     string? ImagePath,
     DateTime? StartDate,
     DateTime? EndDate,
+    int CityId,
     CityGetDTO City,
+    int ThemeId,
     ThemeGetDTO Theme
 );
 

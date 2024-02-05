@@ -32,8 +32,15 @@ public class EventController : ApiControllerBase
     [HttpPut]
     public async Task<IActionResult> Update(EventUpdateCmd cmd)
     {
-        var @event = await Mediator.Send(cmd);
-        return Ok(@event);
+        try
+        {
+            var @event = await Mediator.Send(cmd);
+            return Ok(@event);
+        }
+        catch (Exception ex)
+        {
+            return NotFound(ex);
+        }
     }
 
     [HttpDelete("{id}")]

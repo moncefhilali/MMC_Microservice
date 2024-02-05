@@ -35,7 +35,7 @@ public class EventService
 
     public async Task<Event> Update(Guid id, Event @event)
     {
-        var response = await _http.PutAsJsonAsync($"{_baseUrl}api/{_controller} /{id}", @event);
+        var response = await _http.PutAsJsonAsync($"{_baseUrl}api/{_controller}/{id}", @event);
         response.EnsureSuccessStatusCode();
         return await response.Content.ReadFromJsonAsync<Event>();
     }
@@ -49,6 +49,12 @@ public class EventService
     public async Task<IEnumerable<City>> FindAllCities()
     {
         var response = await _http.GetFromJsonAsync<IEnumerable<City>>($"{_baseUrl}api/City");
+        return response;
+    }
+
+    public async Task<IEnumerable<Theme>> FindAllThemes()
+    {
+        var response = await _http.GetFromJsonAsync<IEnumerable<Theme>>($"{_baseUrl}api/Theme");
         return response;
     }
 }

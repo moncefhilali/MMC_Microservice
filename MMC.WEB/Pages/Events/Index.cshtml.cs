@@ -1,4 +1,3 @@
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using MMC.WEB.Entities;
 using MMC.WEB.Services;
@@ -15,6 +14,7 @@ public class IndexModel : PageModel
 
     public IEnumerable<Event> Events { get; set; }
     public IEnumerable<City> Cities { get; private set; }
+    public IEnumerable<Theme> Themes { get; private set; }
 
 
 
@@ -23,5 +23,6 @@ public class IndexModel : PageModel
     {
         Events = await _service.FindAll();
         Cities = await _service.FindAllCities();
+        Themes = await _service.FindAllThemes();
     }
 }

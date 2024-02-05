@@ -1,0 +1,53 @@
+﻿@page
+@model MMC.WEB.Pages.Speakers.IndexModel
+@{
+    ViewData["Title"] = "Speakers List";
+}
+
+
+<div class="container-fluid">
+    <div class="container-fluid py-1 mb-2 bg-dark">
+        <h3 class="mb-0 text-center text-light">Speakers</h3>
+    </div>
+
+    <div class="card">
+        <div class="card-body wizard-content">
+            <div class="row mr-2 ml-2">
+                <div class="col-xl-8 col-12">
+                    <h3 class="card-title title-2">Speakers List</h3>
+                </div>
+                <div class="col-xl-4 col-12 text-right">
+                    <a asp-page="/Speakers/Create" class="btn btn-success btn-lg mt-1"><i class="fas fa-plus"></i>&nbsp; Add Speaker</a>
+                </div>
+            </div>
+
+            <hr />
+
+            <div class="mt-3">
+
+
+                <div class="row justify-content-center ml-2 mr-2">
+                    <!-- Center the entire row -->
+                    @foreach (var item in Model.Speakers)
+                    {
+                        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 mb-2">
+                            <div class="card" style="background-color:#fff">
+                                <div class="text-center mt-3">
+                                    <img asp-append-version="true" src="~/images/@item.PicturePath" class="card-img-top rounded-circle" style="height:300px; width:300px; margin: 1 auto;" />
+                                </div>
+                                <div class="card-body text-center">
+                                    <h4 class="card-title">@item.Firstname @item.Lastname</h4>
+                                    <div class="text-white">
+                                        <a asp-route-id="@item.Id" asp-page="/Speakers/Details" class="text text-white btn btn-success btn-block fs-5 font-weight-bold"><i class="bi bi-info-circle-fill"></i> info</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

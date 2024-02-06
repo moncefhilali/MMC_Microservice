@@ -1,0 +1,47 @@
+.Events-Container {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Event-Image img {
+  width: 100%;
+  border-radius: 30px;
+}
+
+.Event-Lower {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Event-Info p,
+.Event-Info h3 {
+  color: #4e3472;
+}
+
+.Event-Link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Event-Link a {
+  color: white;
+  top: 10px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: #dc143c;
+  border-radius: 20px;
+  padding: 10px 20px;
+  transition: all 0.5s;
+}
+
+.Event-Link:hover a {
+  background-color: #b31131;
+  box-shadow: 1px 1px 10px gray;
+}
+
+.Event-Card {
+  margin-bottom: 20px;
+}

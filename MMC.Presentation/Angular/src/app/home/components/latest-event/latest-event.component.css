@@ -1,0 +1,77 @@
+.Event-Main {
+  margin-top: 200px;
+  margin-bottom: 130px;
+}
+
+.Event-Main h1 {
+  text-align: center;
+  color: #4e3472;
+}
+
+.Event-Container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  height: 360px;
+  display: flex;
+  background-color: white;
+  border-radius: 30px;
+  align-items: center;
+}
+
+.Event-Info {
+  width: 60%;
+  background-color: gray;
+  border-radius: 20px;
+  height: 300px;
+  margin-left: 30px;
+  background-size: cover;
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 0)
+    ),
+    url("../../../../assets/images/latest_event.png");
+  transition: all 0.5s;
+}
+
+.Event-Info p {
+  color: white;
+  position: relative;
+  top: 230px;
+  left: 20px;
+  transition: all 0.5s;
+  text-shadow: 1px 1px 5px gray;
+}
+
+.Event-Container:hover p {
+  font-size: 20px;
+}
+
+.Event-Info:hover {
+  cursor: pointer;
+}
+
+.Event-Button {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Event-Button input {
+  background-color: #dc143c;
+  color: white;
+  padding: 10px 20px;
+  font-size: 24px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 20px;
+  border-style: none;
+  transition: all 0.5s;
+}
+
+.Event-Button input:hover {
+  background-color: #aa1130;
+  box-shadow: 1px 1px 10px gray;
+}

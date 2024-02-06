@@ -1,0 +1,38 @@
+.Slider-Main {
+  width: 90%;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img {
+  border-radius: 30px;
+}
+
+.mb-3 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mb-3 p {
+  position: relative;
+  bottom: 70px;
+  font-weight: 700;
+  color: rgb(43, 43, 43);
+  text-shadow: 1px 1px 10px black;
+}
+
+.p-reset {
+  position: relative;
+  bottom: 100px;
+}
+
+.product-image {
+  width: 950px;
+  height: 475px;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: cover;
+  mask-image: linear-gradient(to top, transparent, black 20%);
+}

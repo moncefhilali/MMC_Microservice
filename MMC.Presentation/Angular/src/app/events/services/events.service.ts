@@ -6,7 +6,7 @@ import { Event } from '../interfaces/events-interface';
   providedIn: 'root',
 })
 export class EventsService {
-  readonly ROOT_URL = 'https://localhost:7216/api/Clinics';
+  readonly ROOT_URL = 'https://greatpurplewave28.conveyor.cloud/api/Event';
 
   constructor(private http: HttpClient) {}
 

@@ -4,14 +4,14 @@ import { Theme } from './theme-interface';
 
 export interface Event {
   Id: Guid;
-  Title: string;
-  Address?: string | null;
-  Description?: string | null;
-  ImagePath?: string | null;
-  StartDate?: Date | null;
-  EndDate?: Date | null;
-  CityId: number;
-  City: City;
-  ThemeId: number;
-  Theme: Theme;
+  title: string;
+  address?: string | null;
+  description?: string | null;
+  imagePath?: string | null;
+  startDate?: Date | null;
+  endDate?: Date | null;
+  cityId: number;
+  city: City;
+  themeId: number;
+  theme: Theme;
 }

@@ -1,12 +1,12 @@
 <div class="Events-Container">
   <div class="Event-Card" *ngFor="let event of events">
     <div class="Event-Image">
-      <img src="../../assets/images/{{ event.imageUrl }}" alt="" />
+      <img src="../../assets/images/{{ event.imagePath }}" alt="" />
     </div>
     <div class="Event-Lower">
       <div class="Event-Info">
         <h3>{{ event.title }}</h3>
-        <p>{{ event.place }}</p>
+        <p>{{ event.city.name }}</p>
       </div>
       <div class="Event-Link">
         <a href="/register">DETAILS</a>

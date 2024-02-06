@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Speaker } from '../../interfaces/speaker-interface';
 
 @Component({
   selector: 'app-speakers',
@@ -6,5 +7,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./speakers.component.css'],
 })
 export class SpeakersComponent {
-  @Input() speakers: any[] = [];
+  @Input() speakers: Speaker[] = [];
 }

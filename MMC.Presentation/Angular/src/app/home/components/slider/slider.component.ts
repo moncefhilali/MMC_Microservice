@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Event } from 'src/app/events/interfaces/events-interface';
 
 @Component({
   selector: 'app-slider',
@@ -6,5 +7,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./slider.component.css'],
 })
 export class SliderComponent {
-  @Input() events: any;
+  @Input() events: any[] = [];
 }

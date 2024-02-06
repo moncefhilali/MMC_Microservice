@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Event } from '../../interfaces/events-interface';
 
 @Component({
   selector: 'app-events',
@@ -6,5 +7,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./events.component.css'],
 })
 export class EventsComponent {
-  @Input() events: any[] = [];
+  @Input() events: Event[] = [];
 }

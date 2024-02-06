@@ -1,6 +1,5 @@
 .Slider-Main {
   width: 90%;
-  margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -17,9 +16,10 @@ img {
 
 .mb-3 p {
   position: relative;
-  bottom: 70px;
+  top: 470px;
+  font-size: 22px;
   font-weight: 700;
-  color: rgb(43, 43, 43);
+  color: white;
   text-shadow: 1px 1px 10px black;
 }
 
@@ -34,5 +34,5 @@ img {
   margin-left: auto;
   margin-right: auto;
   object-fit: cover;
-  mask-image: linear-gradient(to top, transparent, black 20%);
+  cursor: pointer;
 }

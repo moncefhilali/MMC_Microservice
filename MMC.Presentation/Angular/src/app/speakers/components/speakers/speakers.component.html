@@ -1,0 +1,10 @@
+<div class="Speakers-Container">
+  <div class="Speaker-Card" *ngFor="let speaker of speakers">
+    <div class="Speaker-Image">
+      <img src="../../assets/images/{{ speaker.imagePath }}" alt="" />
+    </div>
+    <div class="Speaker-Name">
+      <p>{{ speaker.name }}</p>
+    </div>
+  </div>
+</div>

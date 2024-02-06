@@ -1,0 +1,24 @@
+<div class="Slider-Main">
+  <p-carousel
+    [value]="events"
+    [numVisible]="1"
+    [numScroll]="1"
+    [autoplayInterval]="3000"
+  >
+    <ng-template let-event pTemplate="item">
+      <div class="product-item">
+        <div class="product-item-content">
+          <div class="mb-3">
+            <img
+              src="../../assets/images/{{ event.imagePath }}"
+              [alt]="event.title"
+              class="product-image"
+            />
+            <p>{{ event.title }}</p>
+          </div>
+          <div></div>
+        </div>
+      </div>
+    </ng-template>
+  </p-carousel>
+</div>

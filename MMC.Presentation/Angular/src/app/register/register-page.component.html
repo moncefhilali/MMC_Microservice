@@ -1,0 +1,30 @@
+<app-navbar></app-navbar>
+<app-header title="Register"></app-header>
+<div class="Register-Form">
+  <div class="Register-Input-1">
+    <input type="text" placeholder="First Name" />
+    <input type="text" placeholder="Last Name" />
+    <input type="email" placeholder="Email" />
+  </div>
+  <div class="Register-Input-2">
+    <input type="text" placeholder="Phone Number +212 ..." />
+    <input type="text" placeholder="Company" />
+    <input type="text" placeholder="Gender" />
+  </div>
+  <div class="Register-Message">
+    <textarea
+      name=""
+      id=""
+      cols="50"
+      rows="10"
+      placeholder="Message"
+    ></textarea>
+  </div>
+  <div class="Register-Button">
+    <input
+      type="submit"
+      (click)="redirectToAnotherPage()"
+      value="REGISTER NOW"
+    />
+  </div>
+</div>

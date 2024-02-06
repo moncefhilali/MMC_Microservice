@@ -1,0 +1,47 @@
+input {
+  width: 300px;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border-style: none;
+  border: 2px solid gray;
+}
+
+textarea {
+  width: 300px;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border-style: none;
+  border: 2px solid gray;
+  width: 100%;
+}
+
+.Register-Form {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Register-Input-1,
+.Register-Input-2 {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Register-Message {
+  margin-top: 20px;
+}
+
+.Register-Button {
+  margin-top: 20px;
+}
+
+.Register-Button input {
+  background-color: #dc143c;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
